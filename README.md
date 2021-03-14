@@ -3,7 +3,8 @@
 
 https://covid-vaccine-ng.vercel.app/
 
-The idea was sprung while talking to my parents about vaccines and my elderly parents are undecided with the vaccine when it becomes available.  During our chat, they said that they didn't know how the vaccination is going in their native country so I poked around in google and quickly found data from the fine folks at https://ourworldindata.org/.  Turns out that they have a json file that is published on their github site.  
+The idea was sprung while talking to my parents about vaccines and my elderly parents are undecided with the vaccine when it becomes available.  During our chat, they said that they didn't know how the vaccination is going in their native country so I poked around in google and quickly found data from the fine folks at https://ourworldindata.org/.  Turns out that they have a json file that is published on their github site.  They have published the data in json and csv formats.  
+https://github.com/owid/covid-19-data/blob/master/public/data/vaccinations/vaccinations.json
 
 There are some fine websites out there that already shows the data but I wanted to customize something that my parents will easily be able to just click from a link I send to them via WhatsApp.  Turns out my other family members from my birth country is also looking for such information.  
 
