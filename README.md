@@ -1,27 +1,12 @@
-# CovidVaccine
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+# Covid-Vaccination dashboard
 
-## Development server
+https://covid-vaccine-ng.vercel.app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The idea was sprung while talking to my parents about vaccines and my elderly parents are undecided with the vaccine when it becomes available.  During our chat, they said that they didn't know how the vaccination is going in their native country so I poked around in google and quickly found data from the fine folks at https://ourworldindata.org/.  Turns out that they have a json file that is published on their github site.  
 
-## Code scaffolding
+There are some fine websites out there that already shows the data but I wanted to customize something that my parents will easily be able to just click from a link I send to them via WhatsApp.  Turns out my other family members from my birth country is also looking for such information.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is very basic dashboard that is just a KISS.  No fancy stuff so I challenged myself a 2-3 hour hackathon to write and deploy on Vercel.  The only issue I am stuck with is that I still have to manually update the json file daily.  Automating that will be next on my list.  Initially I thought I can just go fetch the data but turns out it didn't work because the file needs to be downloaded and not served out by GitHub. Another challenge for another day.  
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Enjoy.
