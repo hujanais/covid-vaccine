@@ -77,7 +77,6 @@ export class AppComponent implements OnInit {
 
     // get the latest data summary.
     this.latestData = country.data[country.data.length - 1];
-    console.log(this.latestData);
   }
 
   private updateCharts(country: ICountry) {
