@@ -1,59 +1,59 @@
-<div class='mat-app-background'>
-  <div class="div-root-container">
-    <div class='div-commands'>
-      <mat-form-field>
-        <mat-label>Select country</mat-label>
-        <mat-select [(value)]=" selectedCountry">
-          <mat-option *ngFor="let item of countries" [value]='item'>
-            {{item.country}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div class='div-title'>Data courtesy https://ourworldindata.org</div>
-      <div class='div-space'></div>
-      <div>Last Updated:</div>
-      <div>{{lastUpdated}}</div>
-    </div>
-    <div class='div-summary-data'>
-      <div class='div-label'>People vaccinated: </div>
-      <div class='div-data'>{{latestData?.people_vaccinated}}</div>
-      <div class='div-label'>Population vaccinated(%): </div>
-      <div class='div-data'>{{latestData?.people_vaccinated_per_hundred}}</div>
-    </div>
-    <div class='div-table-data'>
-      <table>
-        <thead>
-          <td>Date</td>
-          <td>Total Vaccinations</td>
-          <td>People Vaccinated</td>
-          <td>% of population vac.</td>
-        </thead>
-        <tr *ngFor="let item of selectedCountry?.data">
-          <td>{{item.date}}</td>
-          <td>{{item.total_vaccinations}}</td>
-          <td>{{item.people_vaccinated}}</td>
-          <td>{{item.people_vaccinated_per_hundred}}</td>
-        </tr>
-      </table>
-    </div>
-    <div class='div-chart'>
-      <div style="display: block; width:100%; height: 100%">
-        <canvas baseChart [datasets]="scatterChartData" [options]="scatterChartOptions" [chartType]="scatterChartType"
-          style="background-color: #DDDDDD">
-        </canvas>
+<div class='div-root-container mat-app-background'>
+  <mat-tab-group>
+    <mat-tab label='world-view'>
+      <div class='div-world-view'>
+        <app-animated-graph [countries]='countries'></app-animated-graph>
       </div>
-    </div>
-    <!-- <div class='div-summary-data'>
-    <div class='div-chart'>
-      <div>
-        <div>
-          <div style="display: block">
-            <canvas baseChart [datasets]="scatterChartData" [options]="scatterChartOptions"
-              [chartType]="scatterChartType">
-            </canvas>
+    </mat-tab>
+    <mat-tab label='by country'>
+      <div class='div-country-view'>
+        <div class='div-root-container'>
+          <div class='div-commands'>
+            <mat-form-field>
+              <mat-label>Select country</mat-label>
+              <mat-select [(value)]=" selectedCountry">
+                <mat-option *ngFor="let item of countries" [value]='item'>
+                  {{item.country}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div class='div-space'></div>
+            <div>Last Updated:</div>
+            <div>{{lastUpdated}}</div>
+          </div>
+          <div class='div-summary-data'>
+            <div class='div-label'>People vaccinated: </div>
+            <div class='div-data'>{{latestData?.people_vaccinated}}</div>
+            <div class='div-label'>Population vaccinated(%): </div>
+            <div class='div-data'>{{latestData?.people_vaccinated_per_hundred}}</div>
+          </div>
+          <!-- <div class='div-table-data'>
+            <table>
+              <thead>
+                <td>Date</td>
+                <td>Total Vaccinations</td>
+                <td>People Vaccinated</td>
+                <td>% of population vac.</td>
+              </thead>
+              <tr *ngFor="let item of selectedCountry?.data">
+                <td>{{item.date}}</td>
+                <td>{{item.total_vaccinations}}</td>
+                <td>{{item.people_vaccinated}}</td>
+                <td>{{item.people_vaccinated_per_hundred}}</td>
+              </tr>
+            </table>
+          </div> -->
+          <div class='div-chart'>
+            <div style="display: block;">
+              <canvas baseChart [datasets]=" scatterChartData" [options]="scatterChartOptions"
+                [chartType]="scatterChartType" style="background-color: #DDDDDD">
+              </canvas>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div> -->
-  </div>
+    </mat-tab>
+  </mat-tab-group>
+  <div class='div-title'>Data courtesy https://ourworldindata.org</div>
+
+</div>

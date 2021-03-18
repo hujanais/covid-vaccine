@@ -5,8 +5,23 @@ $table-border-color: #424242;
 .div-root-container {
   display: flex;
   flex-direction: column;
-  margin:10px;
+  margin:5px;
   height:95vh;
+
+  mat-tab-group {
+    height: 100%;
+  }
+  
+}
+
+.div-world-view {
+  display:flex;
+  flex-direction: column;
+}
+
+.div-country-view {
+  display:flex;
+  flex-direction: column;
 
   .div-label {
     margin:5px;
@@ -35,12 +50,12 @@ $table-border-color: #424242;
     div {
       margin:5px;
     }
-  }
+}
 
-  .div-table-data {
-    flex:1;
-    overflow-y: scroll;
-  }
+  // .div-table-data {
+  //   flex:1;
+  //   overflow-y: scroll;
+  // }
 
   .div-summary-data {
     display: flex;
@@ -48,7 +63,7 @@ $table-border-color: #424242;
   }
 
   .div-chart {
-    flex:2;
+    flex:1;
   }
  
   table {

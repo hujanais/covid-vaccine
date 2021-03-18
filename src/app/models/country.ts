@@ -1,5 +1,6 @@
 export interface ICountry {
   country: string,
+  iso_code: string,
   data: IVaccineData[]
 }
 

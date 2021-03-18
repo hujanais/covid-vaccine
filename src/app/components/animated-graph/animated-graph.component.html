@@ -1,0 +1,8 @@
+<div class='div-container'>
+  <button mat-raised-button color='primary' (click)="restart()">Restart</button>
+  <div style="display: block;">
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>

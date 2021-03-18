@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   // scatter
   public scatterChartOptions: ChartOptions = {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
   };
 
   private chartPoints: ChartPoint[] = [];
