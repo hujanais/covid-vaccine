@@ -1,5 +1,6 @@
 <div class='div-container'>
-  <button mat-raised-button color='primary' (click)="restart()">Restart</button>
+  <!-- <button mat-raised-button color='primary' (click)="restart()">Restart</button> -->
+  <div>Only countries with at least 1mil vaccinations</div>
   <div style="display: block;">
     <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
       [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
